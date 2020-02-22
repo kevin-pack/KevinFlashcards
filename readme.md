@@ -8,7 +8,7 @@
 Flashcard app shows a question and shows the answer once the user taps the screen. 
 
 ### App Walk-though
-<img src="https://i.imgur.com/Y3hgF4z.mp4" width=200><br>
+<img src=https://i.imgur.com/LdQI6ee.gifwidth=200><br>
 
 
 ## Required
