@@ -16,11 +16,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EDk-Nd-YNo">
-                                <rect key="frame" x="70" y="354" width="275" height="188"/>
+                                <rect key="frame" x="30" y="112" width="355" height="248"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Eight (8)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZH-tx-qbV">
-                                        <rect key="frame" x="0.0" y="0.0" width="275" height="188"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="248"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -28,7 +28,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How many bits are in a byte?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvw-Ud-1XV">
-                                        <rect key="frame" x="0.0" y="0.0" width="275" height="188"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="248"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -42,6 +42,30 @@
                                     <outletCollection property="gestureRecognizers" destination="FLs-4j-LRH" appends="YES" id="dJQ-nQ-y3L"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0T-2s-orQ">
+                                <rect key="frame" x="70" y="435" width="275" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="1"/>
+                                <connections>
+                                    <action selector="didTapOption1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vYg-W8-G1W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8d-Df-PP6">
+                                <rect key="frame" x="70" y="559" width="275" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="3"/>
+                                <connections>
+                                    <action selector="didTapOption2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MB8-O6-vhE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEK-ZU-8SK">
+                                <rect key="frame" x="70" y="684" width="275" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="8"/>
+                                <connections>
+                                    <action selector="didTapOption3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tfp-VI-fZY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -49,6 +73,10 @@
                     <connections>
                         <outlet property="AnswerLabel" destination="oZH-tx-qbV" id="f0f-pn-uMz"/>
                         <outlet property="QuestionLabel" destination="vvw-Ud-1XV" id="BQL-Z1-aHh"/>
+                        <outlet property="card" destination="EDk-Nd-YNo" id="xDZ-bN-Zxz"/>
+                        <outlet property="option1" destination="G0T-2s-orQ" id="054-2H-FWS"/>
+                        <outlet property="option2" destination="B8d-Df-PP6" id="i5Z-3L-r65"/>
+                        <outlet property="option3" destination="kEK-ZU-8SK" id="Qt1-ua-mxj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
