@@ -7,7 +7,7 @@ App can change question and answer card now. Also has some color changing on the
 
 ### App Walk-though
 
-<img src="i.imgur.com/Gtw5GaY.gif" width=200><br>
+<img src=https://i.imgur.com/Gtw5GaY.gif width=200><br>
 
 ## Required
 - [x] User can open the creation screen
