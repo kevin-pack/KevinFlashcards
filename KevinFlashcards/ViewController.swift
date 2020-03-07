@@ -66,6 +66,7 @@ class ViewController: UIViewController {
         QuestionLabel.text = question
         AnswerLabel.text = answer
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let navigationController = segue.destination as! UINavigationController
         

@@ -31,8 +31,12 @@ class CreationViewController: UIViewController {
         
         let answerText = answerInput.text
         
-    flashcardsController.updateFlashcard(question: questionText!, answer: answerText!)
-        
+        if (answerText != "") && (questionText != "") {
+            flashcardsController.updateFlashcard(question: questionText!, answer: answerText!)
+        }
+        else{
+            
+        }
         dismiss(animated: true)
     }
 }
