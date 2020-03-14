@@ -27,6 +27,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Extra Answer 1" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hXT-W4-6fL">
+                                <rect key="frame" x="54" y="424" width="307" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Extra Answer 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0JG-DQ-Wbg">
+                                <rect key="frame" x="54" y="523" width="307" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="FK8-rG-U0W"/>
@@ -44,6 +56,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="ExtraAnswer1" destination="hXT-W4-6fL" id="gaP-CB-ggb"/>
+                        <outlet property="ExtraAnswer2" destination="0JG-DQ-Wbg" id="qqo-ho-nwg"/>
                         <outlet property="answerInput" destination="5ll-v6-94i" id="VmH-g8-d9k"/>
                         <outlet property="questionInput" destination="PJR-u5-IrX" id="sPW-1l-oOk"/>
                     </connections>
@@ -80,6 +94,15 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCM-XV-Tfw">
+                                        <rect key="frame" x="312" y="191" width="35" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                        <state key="normal" title="✏️"/>
+                                        <connections>
+                                            <segue destination="EeY-Dd-Ni4" kind="show" identifier="EditSegue" id="P1F-LV-Ubs"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <gestureRecognizers/>
@@ -104,14 +127,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zA1-4s-2EN">
-                                <rect key="frame" x="177" y="336" width="61" height="132"/>
+                                <rect key="frame" x="177" y="335" width="61" height="132"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <state key="normal" title="+">
                                     <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="EeY-Dd-Ni4" kind="presentation" id="wVz-qF-h80"/>
+                                    <segue destination="EeY-Dd-Ni4" kind="show" id="wVz-qF-h80"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8d-Df-PP6">
@@ -122,17 +145,35 @@
                                     <action selector="didTapOption2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MB8-O6-vhE"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhu-v0-hs2">
+                                <rect key="frame" x="353" y="416" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Prev"/>
+                                <connections>
+                                    <action selector="didTapOnPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H4F-rS-Kgv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Z9-PQ-gwi">
+                                <rect key="frame" x="353" y="378" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="didTapOnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DjH-zx-ms5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="AnswerLabel" destination="oZH-tx-qbV" id="f0f-pn-uMz"/>
-                        <outlet property="QuestionLabel" destination="vvw-Ud-1XV" id="BQL-Z1-aHh"/>
+                        <outlet property="answerLabel" destination="oZH-tx-qbV" id="f0f-pn-uMz"/>
                         <outlet property="card" destination="EDk-Nd-YNo" id="xDZ-bN-Zxz"/>
+                        <outlet property="nextButton" destination="7Z9-PQ-gwi" id="NQF-gI-QOh"/>
                         <outlet property="option1" destination="G0T-2s-orQ" id="054-2H-FWS"/>
                         <outlet property="option2" destination="B8d-Df-PP6" id="i5Z-3L-r65"/>
                         <outlet property="option3" destination="kEK-ZU-8SK" id="Qt1-ua-mxj"/>
+                        <outlet property="prevButton" destination="rhu-v0-hs2" id="6Ng-Mb-gnR"/>
+                        <outlet property="questionLabel" destination="vvw-Ud-1XV" id="BQL-Z1-aHh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -149,6 +190,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EeY-Dd-Ni4" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="2ht-M9-bxX"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yxc-tx-XwX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -163,4 +205,7 @@
             <point key="canvasLocation" x="951" y="126"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="P1F-LV-Ubs"/>
+    </inferredMetricsTieBreakers>
 </document>
