@@ -40,6 +40,10 @@ class CreationViewController: UIViewController {
         
         let answerText = answerInput.text
         
+        var isExisting = false
+        if initialQuestion != nil{
+            isExisting = true
+        }
         
         if answerText == nil || questionText == nil || answerText!.isEmpty || questionText!.isEmpty
         {
@@ -50,7 +54,8 @@ class CreationViewController: UIViewController {
             alert.addAction(okAction)
         }
         else{
-            flashcardsController.updateFlashcard(question: questionText!, answer: answerText!, op1: ExtraAnswer1.text!, op2: ExtraAnswer2.text!)
+            flashcardsController.updateFlashcard(question: questionText!, answer: answerText!, isExisting: isExisting)
+            flashcardsController.updateLabels()
             dismiss(animated: true)
         }
     }
